@@ -1,3 +1,5 @@
+<!-- Buttons for Calculator (Form would appear onclick). Hidden for now-->
+
 <div id="buttons"> 
  <button [disabled]='clicked'(click)='handleClick()' mat-raised-button class="button">
     Addition
@@ -18,6 +20,7 @@
 </div>
 
 
+<!-- Straight forward calculator form where buttons act as get method for number data -->
 <div>
 
   <form [formGroup]="additionForm" (ngSubmit)="onSubmit()">

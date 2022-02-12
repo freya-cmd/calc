@@ -11,3 +11,5 @@ public class CalcSpringApplication {
 	}
 
 }
+//create a jar file
+//put into angular code

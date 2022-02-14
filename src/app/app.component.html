@@ -1,38 +1,41 @@
 <!-- Buttons for Calculator (Form would appear onclick). Hidden for now-->
 
 <div id="buttons"> 
- <button [disabled]='clicked'(click)='handleClick()' mat-raised-button class="button">
+ <button  mat-raised-button class="button">
     Addition
  </button>
 
- <button [disabled]='clicked' (click)='handleClick()' mat-raised-button class="button">
+ <button  mat-raised-button class="button">
   Subtraction
 </button>
 
-<button [disabled]='clicked'(click)='handleClick()' mat-raised-button class="button">
+<button  mat-raised-button class="button">
   Multiplication
 </button>
 
-<button [disabled]='clicked'(click)='handleClick()' mat-raised-button class="button">
+<button mat-raised-button class="button">
   Division
 </button>
 
 </div>
 
 
-<!-- Straight forward calculator form where buttons act as get method for number data -->
-<div>
 
-  <form [formGroup]="additionForm" (ngSubmit)="onSubmit()">
-    <label for="number1">Enter your first number:</label><br>
-    <input formControlName="number1" type="text" id="number1" name="number1" value="First Number"><br>
+<div id="buttons2">
 
-    <label for="number2">Enter your second number::</label><br>
-    <input formControlName="number2" type="text" id="number2" name="number2" value="Second Number"><br><br>
+    <form [formGroup]="form">
+      <label for="number1">Enter your first number:</label><br>
+      <input class="form-control" type="text" id="number1" name="number1" formControlName="number1" #number1><br>
+  
+      <label for="number2">Enter your second number::</label><br>
+      <input class="form-control" type="text" id="number2" name="number2" formControlName="number2" #number2><br><br>
+  
+      <button type="submit" (click)="clickme(number1.value, number2.value)">Add</button>
+      <input id="subtract" type="submit" value="Subtract"><br>
+      <input id="divide" type="submit" value="Divide"><br>
+      <input id="multiply" type="submit" value="Multiply"><br>
+    </form>
+  </div>
+  <p>{{ number1 }} {{ number2 }}</p>
 
-    <input id="add" type="submit" value="Add"><br>
-    <input id="subtract" type="submit" value="Subtract"><br>
-    <input id="divide" type="submit" value="Divide"><br>
-    <input id="multiply" type="submit" value="Multiply"><br>
-  </form>
-</div>
+<app-calc></app-calc>

@@ -34,13 +34,13 @@ submitForm() {
   var formData: any = new FormData();
   formData.append("number1", this.form.get('number1').value);
   formData.append("number2", this.form.get('number2').value);
-  this.http.post('http://localhost:8082/addition', formData).subscribe(
+  this.http.post('http://localhost:8082proxyddrrr', formData).subscribe(
     (response) => console.log(response),
     (error) => console.log(error)
   )
 } 
 
-  ngOnInit() {
+ /* ngOnInit() {
     this.http.get('https://localhost:8082/').subscribe(Response => {
  
 
@@ -52,4 +52,4 @@ submitForm() {
     onSubmit() {
 
     };
-  }
+  } */ }

@@ -10,17 +10,20 @@ opacity: 0;
 
 #buttons2 {
     margin: auto;
+    margin-top: 10%;
     width: 50%;
-    border: 3px solid grey;
+    border: 1px solid grey;
     border-radius: 15px 50px;;
     padding: 30px;
     text-align: center;
+    background-color:rgba(255, 255, 255, 0.726);
+    
 }
 
 #buttons3 {
     margin: auto;
     width: 50%;
-    border: 3px solid grey;
+    border: 1px solid grey;
     padding: 10px;
     text-align: center;
 }
@@ -32,4 +35,9 @@ opacity: 0;
 }
 #results {
     font-size: 30px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    width: 5%;
+    height: 80%;
+    margin-left: 47.6%;
 }

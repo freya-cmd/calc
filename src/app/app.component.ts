@@ -14,6 +14,9 @@ export class AppComponent {
   number1: string = '';
   number2: string = '';
   responseData: any;
+  word1: string = '';
+  word2: string = '';
+  responseData2: any;
   clickme(number1:string, number2: string) {
     console.log('Test',number1, number2);
   }
@@ -28,6 +31,8 @@ export class AppComponent {
       this.form = this.fb.group({
         number1: [''],
         number2: [''],
+        word1: [''],
+        word2: ['']
 
   })
 }
@@ -69,6 +74,17 @@ submitForm4() {
   formData.append("number1", this.form.get('number1').value);
   formData.append("number2", this.form.get('number2').value);
   this.http.post('http://localhost:4200/api/multiplication', formData).subscribe(
+    (response) => {this.responseData = response },
+    (error) => console.log(error)
+  )
+
+} 
+
+submitForm5() {
+  var formData: any = new FormData();
+  formData.append("word1", this.form.get('word1').value);
+  formData.append("word2", this.form.get('word2').value);
+  this.http.post('http://localhost:4200/api/addition', formData).subscribe(
     (response) => {this.responseData = response },
     (error) => console.log(error)
   )

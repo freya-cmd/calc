@@ -1,4 +1,4 @@
-
+<div>
 <div id="buttons2">
 
     <form [formGroup]="form">
@@ -17,5 +17,23 @@
   <div id="buttons3">
     <p>Results: </p><br>
     <p class="border border-4" id="results">{{ responseData | json }}</p>
+  </div>
+
+  <div id="buttons2">
+
+    <form [formGroup]="form">
+      <h1><label class="badge bg-secondary" for="number1">Enter a word</label></h1>
+      <input style="text-align: center;" class="form-control" type="text" id="word1" name="word1" formControlName="word1" #word1><br>
+      <h1><label class="badge bg-secondary">Enter another word</label></h1>
+      <input style="text-align: center;" class="form-control" type="text" id="word2" name="word2" formControlName="word2" #word2><br><br>
+  
+      <button  class="btn btn-outline-dark" id="sub" type="submit" (click)="clickme(word1.value, word2.value)" (click)="submitForm5()">Add</button>
+    </form>
+  </div>
+ <br>
+  <div id="buttons3">
+    <p>Results: </p><br>
+    <p id="results">{{ responseData | json }}</p>
+  </div>
   </div>
 <app-calc></app-calc>

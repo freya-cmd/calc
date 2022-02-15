@@ -11,14 +11,22 @@ opacity: 0;
 #buttons2 {
     margin: auto;
     width: 50%;
-    border: 3px solid green;
-    padding: 10px;
+    border: 3px solid grey;
+    border-radius: 15px 50px;;
+    padding: 30px;
+    text-align: center;
 }
 
 #buttons3 {
     margin: auto;
     width: 50%;
-    border: 3px solid green;
+    border: 3px solid grey;
     padding: 10px;
     text-align: center;
+}
+
+#sub {
+    padding: 3px;
+    margin: 1%;
+
 }

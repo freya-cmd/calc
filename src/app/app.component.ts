@@ -42,6 +42,40 @@ submitForm() {
 
 } 
 
+submitForm2() {
+  var formData: any = new FormData();
+  formData.append("number1", this.form.get('number1').value);
+  formData.append("number2", this.form.get('number2').value);
+  this.http.post('http://localhost:4200/api/subtraction', formData).subscribe(
+    (response) => {this.responseData = response },
+    (error) => console.log(error)
+  )
+
+} 
+
+submitForm3() {
+  var formData: any = new FormData();
+  formData.append("number1", this.form.get('number1').value);
+  formData.append("number2", this.form.get('number2').value);
+  this.http.post('http://localhost:4200/api/division', formData).subscribe(
+    (response) => {this.responseData = response },
+    (error) => console.log(error)
+  )
+
+} 
+
+submitForm4() {
+  var formData: any = new FormData();
+  formData.append("number1", this.form.get('number1').value);
+  formData.append("number2", this.form.get('number2').value);
+  this.http.post('http://localhost:4200/api/multiplication', formData).subscribe(
+    (response) => {this.responseData = response },
+    (error) => console.log(error)
+  )
+
+} 
+
+
  /* ngOnInit() {
     this.http.get('https://localhost:8082/').subscribe(Response => {
  

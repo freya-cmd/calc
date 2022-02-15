@@ -1,5 +1,14 @@
 <div>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Calculator</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Add, Subtract, Divivde, or Multiply</h6>
+      <p class="card-text">Input two numbers in the field, and choose an operation.</p>
+    </div>
+  </div>
 <div id="buttons2">
+
+
 
     <form [formGroup]="form">
       <h1><label class="badge bg-secondary" for="number1">Enter your first number</label></h1>
@@ -19,7 +28,15 @@
     <p class="border border-4" id="results">{{ responseData | json }}</p>
   </div>
 
+  <div id = "card" class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Add Words</h5>
+      <p class="card-text">Concatenate words together by putting them in each form</p>
+    </div>
+  </div>
+
   <div id="buttons2">
+
 
     <form [formGroup]="form">
       <h1><label class="badge bg-secondary" for="number1">Enter a word</label></h1>
@@ -30,10 +47,15 @@
       <button  class="btn btn-outline-dark" id="sub" type="submit" (click)="clickme(word1.value, word2.value)" (click)="submitForm5()">Add</button>
     </form>
   </div>
+
+
  <br>
+ 
   <div id="buttons3">
     <p>Results: </p><br>
-    <p id="results">{{ responseData | json }}</p>
+    <p id="results2">{{ responseData | json }}</p>
   </div>
+  
   </div>
+  <br>
 <app-calc></app-calc>

@@ -10,7 +10,7 @@ opacity: 0;
 
 #buttons2 {
     margin: auto;
-    margin-top: 10%;
+    margin-top: 5%;
     width: 50%;
     border: 1px solid grey;
     border-radius: 15px 50px;;
@@ -40,4 +40,27 @@ opacity: 0;
     width: 5%;
     height: 80%;
     margin-left: 47.6%;
+}
+
+
+.card {
+    float: left;
+    margin-left: 5%;
+    margin-top: 5%;
+
+}
+#results2 {
+    font-size: 30px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    width: 5%;
+    height: 80%;
+    margin-left: 47.6%;
+    
+}
+
+#card {
+    float:right;
+    margin-top: 10%;
+    margin-right: 5%;
 }

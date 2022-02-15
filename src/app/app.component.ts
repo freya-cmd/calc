@@ -34,7 +34,7 @@ submitForm() {
   var formData: any = new FormData();
   formData.append("number1", this.form.get('number1').value);
   formData.append("number2", this.form.get('number2').value);
-  this.http.post('http://localhost:8082proxyddrrr', formData).subscribe(
+  this.http.post('http://localhost:4200/api/addition', formData).subscribe(
     (response) => console.log(response),
     (error) => console.log(error)
   )

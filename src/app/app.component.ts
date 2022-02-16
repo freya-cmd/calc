@@ -14,13 +14,15 @@ export class AppComponent {
   number1: string = '';
   number2: string = '';
   responseData: any;
-  word1: string = '';
-  word2: string = '';
+  str1: string = '';
+  str2: string = '';
   responseData2: any;
   clickme(number1:string, number2: string) {
     console.log('Test',number1, number2);
   }
-  
+  clickme1(str1:string, str2: string) {
+    console.log('Test2',str1, str2);
+  }
 
   // additionForm!: FormGroup;
 
@@ -31,8 +33,8 @@ export class AppComponent {
       this.form = this.fb.group({
         number1: [''],
         number2: [''],
-        word1: [''],
-        word2: ['']
+        str1: [''],
+        str2: [''],
 
   })
 }
@@ -82,10 +84,10 @@ submitForm4() {
 
 submitForm5() {
   var formData: any = new FormData();
-  formData.append("word1", this.form.get('word1').value);
-  formData.append("word2", this.form.get('word2').value);
-  this.http.post('http://localhost:4200/api/addition', formData).subscribe(
-    (response) => {this.responseData = response },
+  formData.append("str1", this.form.get('str1').value);
+  formData.append("str2", this.form.get('str2').value);
+  this.http.post('http://localhost:4200/api2/stringconcat', formData).subscribe(
+    (response) => {this.responseData2 = response },
     (error) => console.log(error)
   )
 

@@ -1,3 +1,5 @@
+<body>
+
 <div>
   <div class="card" style="width: 18rem;">
     <div class="card-body">
@@ -11,20 +13,21 @@
 
 
     <form [formGroup]="form">
-      <h1><label class="badge bg-secondary" for="number1">Enter your first number</label></h1>
+      <h1><label class="badge bg-primary" for="number1">Enter your first number</label></h1>
       <input style="text-align: center;" class="form-control" type="text" id="number1" name="number1" formControlName="number1" #number1><br>
-      <h1><label class="badge bg-secondary">Enter your second number</label></h1>
+      <h1><label class="badge bg-primary">Enter your second number</label></h1>
       <input style="text-align: center;" class="form-control" type="text" id="number2" name="number2" formControlName="number2" #number2><br><br>
-  
-      <button  class="btn btn-outline-dark" id="sub" type="submit" (click)="clickme(number1.value, number2.value)" (click)="submitForm()">Add</button>
-      <button  class="btn btn-outline-dark" id="sub" type="submit" (click)="clickme(number1.value, number2.value)" (click)="submitForm2()">Subtract</button>
-      <button  class="btn btn-outline-dark" id="sub" type="submit" (click)="clickme(number1.value, number2.value)" (click)="submitForm3()">Divide</button>
-      <button  class="btn btn-outline-dark" id="sub" type="submit" (click)="clickme(number1.value, number2.value)" (click)="submitForm4()">Multiply</button>
+  <div id = "buttonborder">
+      <button  class="btn btn-outline-primary" id="sub" type="submit" (click)="clickme(number1.value, number2.value)" (click)="submitForm()">Add</button>
+      <button  class="btn btn-outline-primary" id="sub" type="submit" (click)="clickme(number1.value, number2.value)" (click)="submitForm2()">Subtract</button>
+      <button  class="btn btn-outline-primary" id="sub" type="submit" (click)="clickme(number1.value, number2.value)" (click)="submitForm3()">Divide</button>
+      <button  class="btn btn-outline-primary" id="sub" type="submit" (click)="clickme(number1.value, number2.value)" (click)="submitForm4()">Multiply</button>
+  </div>
     </form>
   </div>
  <br>
   <div id="buttons3">
-    <p>Results: </p><br>
+    <p class="badge bg-light text-dark">Results: </p><br>
     <p class="border border-4" id="results">{{ responseData | json }}</p>
   </div>
 
@@ -39,12 +42,12 @@
 
 
     <form [formGroup]="form">
-      <h1><label class="badge bg-secondary" for="number1">Enter a word</label></h1>
-      <input style="text-align: center;" class="form-control" type="text" id="word1" name="word1" formControlName="word1" #word1><br>
-      <h1><label class="badge bg-secondary">Enter another word</label></h1>
-      <input style="text-align: center;" class="form-control" type="text" id="word2" name="word2" formControlName="word2" #word2><br><br>
+      <h1><label class="badge bg-primary" for="number1">Enter a word</label></h1>
+      <input style="text-align: center;" class="form-control" type="text" id="str1" name="str1" formControlName="str1" #str1><br>
+      <h1><label class="badge bg-primary">Enter another word</label></h1>
+      <input style="text-align: center;" class="form-control" type="text" id="str2" name="str2" formControlName="str2" #str2><br><br>
   
-      <button  class="btn btn-outline-dark" id="sub" type="submit" (click)="clickme(word1.value, word2.value)" (click)="submitForm5()">Add</button>
+      <button  class="btn btn-outline-primary" id="sub" type="submit" (click)="clickme1(str1.value, str2.value)" (click)="submitForm5()">Add</button>
     </form>
   </div>
 
@@ -52,10 +55,11 @@
  <br>
  
   <div id="buttons3">
-    <p>Results: </p><br>
-    <p id="results2">{{ responseData | json }}</p>
+    <p class="badge bg-light text-dark">Results: </p><br>
+    <p id="results2">{{ responseData2 | json }}</p>
   </div>
   
   </div>
   <br>
+  </body>
 <app-calc></app-calc>

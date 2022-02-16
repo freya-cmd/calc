@@ -12,25 +12,28 @@ opacity: 0;
     margin: auto;
     margin-top: 5%;
     width: 50%;
-    border: 1px solid grey;
+    border: 3px solid grey;
     border-radius: 15px 50px;;
     padding: 30px;
     text-align: center;
-    background-color:rgba(255, 255, 255, 0.726);
+    background-color:rgba(0, 0, 0, 0.027);
     
 }
 
 #buttons3 {
     margin: auto;
     width: 50%;
-    border: 1px solid grey;
+    border: 3px solid grey;
     padding: 10px;
     text-align: center;
+    background-color:rgba(0, 0, 0, 0.027);
+    border-radius: 20px;
 }
 
 #sub {
     padding: 3px;
     margin: 1%;
+    
 
 }
 #results {
@@ -40,6 +43,10 @@ opacity: 0;
     width: 5%;
     height: 80%;
     margin-left: 47.6%;
+    background-color:rgba(0, 0, 0, 0.0);
+    border-radius: 18px;
+    border: 0px solid #1E7EE2;
+    
 }
 
 
@@ -56,6 +63,7 @@ opacity: 0;
     width: 5%;
     height: 80%;
     margin-left: 47.6%;
+ 
     
 }
 
@@ -64,3 +72,21 @@ opacity: 0;
     margin-top: 10%;
     margin-right: 5%;
 }
+
+
+
+#number1 {
+    box-shadow: 2px 2px 7px 1px rgba(28,110,164,0.24);
+}
+#number2 {
+    box-shadow: 2px 2px 7px 1px rgba(28,110,164,0.24);
+}
+
+#str1 {
+    box-shadow: 2px 2px 7px 1px rgba(0,0,0,0.24);
+}
+
+#str2 {
+    box-shadow: 2px 2px 7px 1px rgba(0,0,0,0.24);
+}
+
